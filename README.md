@@ -1,12 +1,10 @@
-# 我是專案名稱
+# Maybelline eyes
 
-
-# template for nodejs 6.x
 
 人員
 * PM：誰
 * 創意：誰
-* 前端：誰
+* 前端：Walter
 * 後端：誰
 
 指令
