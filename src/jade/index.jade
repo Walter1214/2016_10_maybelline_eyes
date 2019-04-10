@@ -1,0 +1,33 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/index.js")
+
+block w_content  
+        #home_background
+            //- img(class="backgroundfourty" ,src="~img/blackfourty.png")
+
+            .background_all
+                div(class="background_style" , style="left:0%;background-image:url('~img/index2/style_big_5.jpg');" )
+
+            #home_border
+                include ./w_menu.jade
+                
+
+                //- img(class="r_btn btn_pointer" src="~img/home/btn_R.png")
+                //- img(class="l_btn btn_pointer" src="~img/home/btn_L.png")
+                //- div(class="index2_content" style="background-image: url('asset/img/index2/content.png');")
+                div(class="index2_content")
+                    //- div(class="index2_logo" style="background-image: url('asset/img/index2/logo.png');")
+                    img(class="index2_logo",width="819",src="~img/index2/logo.png")
+                    img(class="index2_sub_title",width="320",src="~img/index2/sub_title.png")
+                    a(href="interactive.html",id="index2_btn")
+                        img(class="index2_btn",width="340",src="~img/index2/btn.png")
+                    
+
+                //- img(class="dot" src="../img/home/DOT.png")
+                ul(class="home_dots") 
+                    li
+                        img(class="dot_color" src="~img/dot_white.png")
+                    li 
+                        img(class="dot_color" src="~img/_dot_yellow.png")

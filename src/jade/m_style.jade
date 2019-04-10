@@ -1,0 +1,42 @@
+- var devMode = process.env.NODE_ENV  == 'development'
+- function date_now_format() { var date = new Date(); return date.getFullYear() + "_" + ( date.getMonth() + 1 ) + "_" + date.getDate() + "_" + date.getHours() + "_" + date.getMinutes() + "_" + date.getSeconds();     }
+- var time = date_now_format();
+
+extends m_master
+block head
+
+    //- if !devMode
+        //- link(rel="stylesheet", href="asset/css/m_style.css")
+
+    script(defer,src="asset/js/m_style.js?_v_=#{time}")
+
+
+block content
+
+    .content
+
+        .background_all
+            .background_style
+            //- .background_style.background_style_1_2
+            //- .background_style.background_style_1_3
+            //- .background_style.background_style_1_4
+            //- .background_style.background_style_1_5
+
+        .home_border
+
+        .center
+            img.kv_title(id="kv_title",src="~m/style/kv_title_1.png", alt="")
+            .btn_wrap
+                a.l_btn(href="javascript:;")
+                a.r_btn(href="javascript:;")
+            .dot_wrap
+        img.yellow(src="~m/style/center_yellow.png", alt="")
+        a.back_btn(href="m_guide.html")
+        a.btn_next(style="display:none;")
+        a.btn_undo(style="display:none;")
+
+    .bottom
+        img(id="style_text" , alt="")
+        a(href="m_product.html")
+            img(src="~m/style/footer_btn.jpg", alt="")
+

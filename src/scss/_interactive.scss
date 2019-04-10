@@ -1,0 +1,41 @@
+#home_background {
+    #home_border {
+        .interactive_content {
+            position: relative;
+            margin: 0 auto;
+            z-index: -1;
+            width: 450px;
+            height: 100%;
+            .step1_logo {
+                position: absolute;
+                width: 100%;
+                top: 15%;
+                left: 0;
+            }
+            .eye_left_btn {
+                position: absolute;
+                width: 24px;
+                top: 40%;
+                left: -48px;
+            }
+            .eye_right_btn {
+                position: absolute;
+                width: 24px;
+                top: 40%;
+                right: -48px;
+            }
+            .eye_style {
+                position: absolute;
+                width: 100%;
+                top: 35%;
+                left: 0;
+            }
+            .eye_next {
+                position: absolute;
+                width: 100px;
+                bottom: 20%;
+                left: calc( 50% - 50px);
+            }
+        }
+    }
+}

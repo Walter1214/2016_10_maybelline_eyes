@@ -1,0 +1,166 @@
+$border_left_right: 5%;
+#home_background {
+    overflow: hidden;
+    width: 100%;
+    height: calc(100% - 40px);
+    .background_all {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // animation: Background_Style_Slider 20s infinite;
+        // animation-direction: alternate;
+        // &>img {
+        //     position: absolute;
+        //     z-index: -1;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        &>div {
+            position: absolute;
+            // z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+    .backgroundfourty {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    // background: #000 url('~img/home/style_big_5.jpg') center center fixed no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+    #home_border {
+        .home_list {
+            position: absolute;
+            top: 0;
+            left: $border_left_right;
+            width: 135px;
+            // width: 25%;
+            // height: 40%;
+            img {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+        .home_content {
+            position: absolute;
+            bottom: 10%;
+            left: $border_left_right;
+            width: 60%;
+            height: 35%;
+            .home_jointly {
+                // width: 100%;
+                width: 632px;
+                // height: 28%;
+            }
+            .home_content_blank {
+                width: 100%;
+                height: 10px;
+            }
+            .home_sub_title {
+                // width: 60%;
+                width: 387px;
+                // height: 60%;
+            }
+        }
+        .home_title {
+            position: absolute;
+            top: 5%;
+            right: $border_left_right;
+            // width: 30%;
+            width: 307px;
+        }
+        .r_btn {
+            position: absolute;
+            top: 45%;
+            right: 1%;
+            width: 3%;
+        }
+        .l_btn {
+            position: absolute;
+            top: 45%;
+            left: 1%;
+            width: 3%;
+        }
+        // .dot
+        // {
+        //     position: absolute;
+        //     bottom: 5%;
+        //     left: 45%;
+        //     width: 10%;
+        // }
+        .home_dots {
+            position: absolute;
+            bottom: 2%;
+            left: 44%;
+            // overflow: hidden;
+            width: 110px;
+            height: 4%;
+            padding: 0;
+            font-size: 0;
+            li {
+                color: white;
+                display: inline-block;
+                width: 17px;
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+            li.dot_text {
+                padding-left: 6px;
+                font-size: 10px;
+            }
+        }
+    }
+    .home_btn_list {
+        position: absolute;
+        z-index: 10;
+        bottom: 9%;
+        right: 16%;
+        width: 11%;
+        height: 12%;
+        .home_btn {
+            position: absolute;
+            // right: 12%;
+            // bottom: 12%;
+            // width: 20%;
+            left: 0;
+            top: 0;
+            width: 170px;
+        }
+        .btn_look {
+            position: absolute;
+            // z-index: 1;
+            // right: 23%;
+            // bottom: 15%;
+            // width: 20%;
+            left: -88px;
+            top: 31px;
+            width: 78px;
+        }
+    }
+    @keyframes Background_Style_Slider {
+        0% {
+            left: 0;
+        }
+        25% {
+            left: -100%;
+        }
+        50% {
+            left: -200%;
+        }
+        75% {
+            left: -300%;
+        }
+        100% {
+            left: -400%;
+        }
+    }
+}

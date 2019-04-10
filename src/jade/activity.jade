@@ -1,0 +1,22 @@
+extends w_master
+
+block w_head
+    
+    script(defer,src="./asset/js/vendor/jquery.scrollbar.min.js")
+    script(defer,src="./asset/js/activity.js")
+
+block w_content     
+        #home_background
+            img(class="backgroundfourty" ,src="~img/blackfourty.png")
+
+            .background_all
+                div(class="background_style" , style="left:0%;background-image:url('asset/img/interactive/style_all.jpg');" )
+            #home_border
+
+                include ./w_menu.jade
+
+                .treaty_content.scrollbar-outer
+                    .treaty_space
+                        img(class="treaty_img permanent",src="../img/activity/treaty.png")
+                        a(href="https://www.maybelline.com.tw/terms-of-service",onclick="$.gapv('/style2016/rule/privacy_btn');", target="_blank")
+                            img(class="treaty_btn btn_pointer",src="../img/activity/treaty_btn.png")

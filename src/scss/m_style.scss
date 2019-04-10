@@ -1,0 +1,184 @@
+@import 'm_common';
+.slick-dots {
+    button {
+        color: transparent !important;
+    }
+}
+
+.wrap {
+    background-color: #fffc00;
+    height: auto !important;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    .home_border {
+        top: 0;
+        left: 0;
+        position: absolute;
+        // padding: 10px;
+        margin: 20px;
+        border: 2px solid #fdfb02;
+        // box-sizing: border-box;
+        width: calc( 100% - 40px);
+        height: calc( 100% - 40px);
+    }
+    .background_all {
+        // z-index: 0;
+        position: relative;
+        // position: absolute;
+        width: 100%;
+        height: 100%;
+        // top: 0;
+        .slick-list {
+            width: 100%;
+            height: 100% !important;
+            .slick-track {
+                height: 100%;
+            }
+        }
+        .background_style {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+        @for $i from 1 through 5 {
+            &.id#{$i} {
+                @for $j from 1 through 4 {
+                    .background_style_1_#{$j} {
+                        background-image:url('~m/style/1#{$j}.jpg');
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 5 {
+            &.id#{$i} {
+                @for $j from 1 through 4 {
+                    .background_style_2_#{$j} {
+                        background-image:url('~m/style/2#{$j}.jpg');
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 5 {
+            &.id#{$i} {
+                @for $j from 1 through 4 {
+                    .background_style_3_#{$j} {
+                        background-image:url('~m/style/3#{$j}.jpg');
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 5 {
+            &.id#{$i} {
+                @for $j from 1 through 3 {
+                    .background_style_4_#{$j} {
+                        background-image:url('~m/style/4#{$j}.jpg');
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 5 {
+            &.id#{$i} {
+                @for $j from 1 through 3 {
+                    .background_style_5_#{$j} {
+                        background-image:url('~m/style/5#{$j}.jpg');
+                    }
+                }
+            }
+        }
+    }
+    .yellow {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+    .back_btn {
+        display: block;
+        width: 88px;
+        height: 32px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-repeat: no-repeat;
+        background-image: url('~m/style/back_btn.png');
+    }
+    .btn_next {
+        display: block;
+        width: 138px;
+        height: 69px;
+        position: absolute;
+        bottom: 150px;
+        right: 0;
+        background-repeat: no-repeat;
+        background-image: url('~m/style/btn_next.png');
+    }
+    .btn_undo {
+        display: block;
+        width: 138px;
+        height: 69px;
+        position: absolute;
+        bottom: 150px;
+        left: 0;
+        background-repeat: no-repeat;
+        background-image: url('~m/style/btn_undo.png');
+    }
+    .center {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-align: center;
+        /*background-repeat: no-repeat;
+        background-position: bottom;
+        background-image:url('~m/style/center_yellow.png');*/
+        .kv_title {
+            position: absolute;
+            right: 0;
+            bottom: 130px;
+            left: 0;
+            margin: auto;
+        }
+        .btn_wrap {
+            position: absolute;
+            left: 30px;
+            width: calc(100% - 60px);
+            // height: 45px;
+            top: 50%;
+            .l_btn,
+            .r_btn {
+                width: 45px;
+                height: 45px;
+                display: block;
+                position: absolute;
+            }
+            .l_btn {
+                background-image: url('~m/index/l_btn.png');
+            }
+            .r_btn {
+                right: 0;
+                background-image: url('~m/index/r_btn.png');
+            }
+        }
+        .dot_wrap {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            // align-self: flex-start;
+            // width:auto;
+            // margin-top: 20px;
+            // padding-left: 40px;
+        }
+    }
+}
+
+.bottom {
+    text-align: center;
+    background-color: #fffc00;
+}

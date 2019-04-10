@@ -1,0 +1,25 @@
+- var devMode = process.env.NODE_ENV  == 'development'
+- function date_now_format() { var date = new Date(); return date.getFullYear() + "_" + ( date.getMonth() + 1 ) + "_" + date.getDate() + "_" + date.getHours() + "_" + date.getMinutes() + "_" + date.getSeconds();     }
+- var time = date_now_format();
+
+extends m_master
+block head
+
+    //- if !devMode
+        //- link(rel="stylesheet", href="asset/css/m_index.css")
+
+    script(defer,src="asset/js/m_list.js?_v_=#{time}")
+
+block content
+
+    .content
+
+        .background_all
+            .background_style.background_style_all
+                img(src="~m/step/style_big_fake.png", alt="")
+        .home_border
+        .list_message 
+            .title() 媚比琳超激細抗暈眼線液
+            .title()《 正品得獎名單 》共30名
+            .content
+                img(src="../img/m/list/list_member.png")

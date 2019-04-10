@@ -1,0 +1,45 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/guide.js")
+
+block w_content  
+        #home_background
+            img(class="backgroundfourty" ,src="~img/blackfourty.png")
+            img(class="backgroundfourty" ,src="~img/home/Rectangle6.png")
+
+            .background_all
+                div(class="background_style")
+                //- img(class="background_style" ,style="left:-100%;" ,src="~img/home/style_big_5.jpg" )
+                //- img(class="background_style" style="left:0%;" src="~img/home/style_big_1.jpg" )
+                //- img(class="background_style" style="left:100%;" src="~img/home/style_big_2.jpg" )
+                //- img(class="background_style" style="left:200%;" src="~img/home/style_big_3.jpg" )
+                //- img(class="background_style" style="left:300%;" src="~img/home/style_big_4.jpg" )
+                //- img(class="background_style" style="left:400%;" src="~img/home/style_big_5.jpg" )
+                //- img(class="background_style" style="left:500%;" src="~img/home/style_big_1.jpg" )
+            
+            .home_btn_list
+                a(id="home_a",href="style.html?id=1")
+                    img(id="home_btn",class="home_btn",src="../img/home/btn_style_1.png")
+                img(class="btn_look" src="~img/home/look_gif.gif")
+
+
+            #home_border
+                include ./w_menu.jade
+                div(class="home_content")
+                    img(class="home_jointly" src="~img/home/jointly.png")
+                    div(class="home_content_blank")
+                    img(class="home_sub_title" src="~img/home/sub_title.png")
+
+                img(class="home_title" src="~img/home/title.png")
+
+                img(class="r_btn btn_pointer" src="~img/home/btn_R.png")
+                img(class="l_btn btn_pointer" src="~img/home/btn_L.png")
+
+                //- img(class="dot" src="../img/home/DOT.png")
+                ul(class="home_dots") 
+                    li(style="width:20px")
+                        img(class="dot_color" src="~img/dot_white.png")
+                    li(style="width:20px") 
+                        img(class="dot_color" src="~img/_dot_yellow.png")
+                    li(class="dot_text" ,style="width:20px") 1

@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        -var title = '::: 媚比琳 :::最佳主角 由你主眼'
+        -var descript = '媚比琳超激細抗暈眼線液，強勢改版新升級!極黑極細筆觸，一筆勾勒所有你想詮釋的角色，讓你一出場，必定魅力橫掃全場!'
+        meta(charset='UTF-8')
+        title=title
+        meta(property='og:title' content='#{title}')
+        meta(property='og:description' content='#{descript}')
+        meta(property='og:image' content='asset/img/FB_share.jpg')
+        meta(property='og:type' content='website')
+        meta(name='description' content='#{descript}')
+        meta(name='keywords' content='媚比琳,Maybelline,媚比琳超激細抗暈眼線液,極黑,極細,0.01mm流暢筆尖,防水,抗汗,最佳主角由你主眼')
+        //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" media="screen")
+        //- link(href="./asset/css/index.css", rel="stylesheet" media="screen")
+        //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css")
+        
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(defer,src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js")
+        //- script(src="./asset/js/main.js")
+        script(defer,src="./asset/js/vendor/all.js")
+        //- script(async,src="./asset/js/vendor/jquery.min.js")
+        script(defer,src="./asset/js/vendor/loadCSS.js")
+        
+        
+        script(defer,src="./asset/js/vendor/Utils.js")
+        script(defer,src="./asset/js/vendor/TransformTool.js")
+        script(defer,src="./asset/js/vendor/TransformCanvasPictures.js")
+        
+        script(defer,src="//cdnjs.cloudflare.com/ajax/libs/device.js/0.2.7/device.min.js")
+        block w_head
+    body(style="display: none;")
+        //- img(id="top" width="1929" height="78" src="~img/top.png")
+        #top()
+        a#go_maybelline(class="btn_pointer",href="https://www.maybelline.com.tw/",onclick="$.gapv('/style2016/guide/home_btn');")
+        block w_content
+
+        include script.html
+        
+        <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TCTN6J"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TCTN6J');</script><!-- End Google Tag Manager -->
+        <script type="text/javascript" class="amnet_dmp_tag">var amnet_i_src = 'pt.amnetgroup.com.tw/acjs/cyd_LorealMBL.js';var amnet_i_ct = document.createElement('script');var src = (location.protocol == 'https:') ? 'https://' : 'http://';amnet_i_ct.setAttribute('src',src+amnet_i_src); amnet_i_ct.charset = 'utf-8';var amnet_i_cts = document.getElementsByTagName('script')[0];amnet_i_cts.parentNode.insertBefore(amnet_i_ct, amnet_i_cts);</script>

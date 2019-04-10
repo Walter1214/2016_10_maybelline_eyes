@@ -1,0 +1,21 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/producteye.js")
+block w_content 
+        #home_background
+            img(class="backgroundfourty" src="~img/home/Rectangle6.png" hidden)
+
+            .background_all
+                .background_left(style="position: absolute;top:0;left:0;width: 57%;")
+                    img(class="producteye_photo" src="~img/producteye/product_eye_photo.jpg" )
+                .background_right
+                    img(class="producteye_text" src="~img/producteye/product_text.jpg" )
+                    .product_yahoo
+                        a(href="https://tw.mall.yahoo.com/item/MAYBELLINE-%E5%AA%9A%E6%AF%94%E7%90%B3-%E6%96%B0%E6%84%9F%E8%A6%BA-%E6%A5%B5%E8%87%B4%E6%BF%83%E5%AF%86%E5%A5%A2%E8%8F%AF%E7%B2%BE%E8%90%83%E7%9D%AB%E6%AF%9B%E8%86%8F-10-p0429112094742" target="_blank")
+                            img(id="yahoo_logo",class="yahoo_logo btn_pointer", src="~img/product/Yahoo_Logo.png")
+                        img( class="buy_logo" src="~img/product/buy_logo.gif")
+                    
+            #home_border
+                include ./w_menu.jade
+                img( class="btn_back btn_pointer" src="~img/producteye/btn_back.png" onclick="window.location.href='product.html'")

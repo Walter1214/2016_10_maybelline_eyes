@@ -1,0 +1,30 @@
+#home_background {
+    #home_border {
+        .index2_content {
+            position: relative;
+            margin: 0 auto;
+            z-index: -1;
+            width: 80%;
+            height: 100%;
+            .index2_logo {
+                position: absolute;
+                width: 50%;
+                top: 48%;
+                left: 50%;
+                margin-left: -25%;
+            }
+            .index2_sub_title {
+                position: absolute;
+                width: 320px;
+                bottom: 10%;
+                right: 55%;
+            }
+            .index2_btn {
+                position: absolute;
+                width: 340px;
+                bottom: 12%;
+                left: 50%;
+            }
+        }
+    }
+}

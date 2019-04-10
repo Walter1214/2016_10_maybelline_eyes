@@ -1,0 +1,265 @@
+#home_background {
+    #home_border {
+        @mixin step_content {
+            position: relative;
+            z-index: -1;
+            top: 5%;
+            width: 525px;
+            height: 95%;
+            margin: 0 auto;
+            &.hide_content {
+                display: none;
+            }
+            // border: 1px solid blue;
+        }
+        @mixin absolute_center {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            &.hide_content {
+                display: none;
+            }
+        }
+        .step2_1_content {
+            @include step_content;
+            .step2_logo {
+                position: absolute;
+                left: calc(50% - 221px);
+                width: 442px;
+            }
+            .help_text {
+                font-size: 26px;
+                padding-top: 20%;
+                text-align: center;
+                color: white;
+            }
+            .upload_btn {
+                position: absolute;
+                top: 40%;
+                left: calc(50% - 74px);
+                width: 148px;
+            }
+            .last_step1 {
+                position: absolute;
+                bottom: 20%;
+                left: calc(50% - 74px);
+                width: 148px;
+            }
+        }
+        .step2_2_content {
+            @include step_content;
+            .step2_logo {
+                position: absolute;
+                left: calc(50% - 221px);
+                width: 442px;
+            }
+            .help_text {
+                font-size: 26px;
+                padding-top: 20%;
+                text-align: center;
+                color: white;
+            }
+            .hit_area {
+                position: absolute;
+                z-index: 10;
+                top: 30%;
+                width: 526px;
+                height: 300px;
+                border: 1px solid red;
+                $top: 40px;
+                .rectangle_area {
+                    position: absolute;
+                    top: 68px;
+                    left: 13px;
+                    width: 500px;
+                    height: 164px;
+                    border: 1px solid yellow;
+                }
+                .safe_area {
+                    position: absolute;
+                    width: 500px;
+                    height: 164px;
+                    top: 68px;
+                    left: 13px;
+                    z-index: 0;
+                    background-image: url('../img/step_2/save_area.png');
+                }
+                #canvas {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+                .remind_figure {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-image: url('../img/step_2/icon_move.png');
+                }
+                @mixin canvas_tool {
+                    position: absolute;
+                    right: -80px;
+                    width: 65px;
+                }
+                .icon_turnleft {
+                    top: $top * 2;
+                    @include canvas_tool;
+                }
+                .icon_turnright {
+                    top: $top * 3;
+                    @include canvas_tool;
+                }
+                .icon_big {
+                    top: $top * 4;
+                    @include canvas_tool;
+                }
+                .icon_small {
+                    top: $top * 5;
+                    @include canvas_tool;
+                }
+            }
+            .btn_backupload {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+            }
+            .next_step3 {
+                position: absolute;
+                right: 0;
+                bottom: 20px;
+            }
+        }
+        .step3_content {
+            @include step_content;
+            .step3_logo {
+                position: absolute;
+                left: calc(50% - 221px);
+                width: 442px;
+            }
+            .help_text {
+                font-size: 26px;
+                padding-top: 20%;
+                text-align: center;
+                color: white;
+            }
+            .combing_img {
+                position: absolute;
+                z-index: 10px;
+                top: 30%;
+                left: 14px;
+                width: 500px;
+                height: 250px;
+                border: 1px solid red;
+                #RectangleImg {
+                    position: absolute;
+                    width: 100%;
+                    height: 164px;
+                    top: 43px;
+                    /*border: 1px solid greenyellow;*/
+                }
+                #canvas2 {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    /*border: 1px solid lightyellow;*/
+                    z-index: 6;
+                }
+                .safe_area {
+                    position: absolute;
+                    width: 500px;
+                    height: 164px;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    background-image: url('../img/step_2/save_area.png');
+                }
+            }
+            .btn_recutting {
+                position: absolute;
+                bottom: 17%;
+                left: 0;
+            }
+            .final_step {
+                position: absolute;
+                right: 0;
+                bottom: 17%;
+            }
+        }
+        .uploading_content {
+            @include step_content;
+            .uploadingImg {
+                width: 224;
+                height: 92;
+                @include absolute_center;
+            }
+        }
+        .final_content {
+            @include step_content;
+            width: 600px;
+            .poster {
+                margin-top: 20%;
+                /*margin-left: 5%;*/
+            }
+            .help_text {
+                font-size: 26px;
+                position: absolute;
+                width: 100%;
+                top: 5%;
+                transform: translateY(-50%);
+                text-align: center;
+                color: white;
+            }
+            .fb_share_btn {
+                position: absolute;
+                right: 0;
+                bottom: 8%;
+            }
+            .next_share {
+                position: absolute;
+                bottom: 8%;
+                left: 0;
+            }
+        }
+        .user_contenct {
+            @include step_content;
+            top: 10%;
+            li {
+                width: 95%;
+                margin: 0 auto;
+                padding-bottom: 10px;
+                text-align: center;
+                list-style: none;
+                font-size: 16px;
+                color: yellow;
+                // border: 1px solid red;
+                input[type='text'] {
+                    background-color: yellow;
+                    color: black;
+                    border: none;
+                }
+                input[type='checkbox'] {
+                    background-color: black;
+                    border: 3px solid yellow;
+                }
+                &.help_text {
+                    color: white;
+                }
+                >div {
+                    margin: 0 auto;
+                    width: 60%;
+                    text-align: right;
+                }
+            }
+            &li:nth-child(3) {
+                width: 60%;
+            }
+        }
+    }
+}

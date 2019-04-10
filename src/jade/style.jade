@@ -1,0 +1,29 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/style.js")
+block w_content    
+        #home_background
+            img(class="backgroundfourty" src="~img/home/Rectangle6.png" hidden)
+
+            .background_all
+                div(class="background_style" , style="left:-100%;background-img:url('~img/home/style_big_5.jpg');" )
+                //- img(class="background_style" style="left:-100%;" src="~img/style/11.jpg" )
+                
+            #home_border
+                include ./w_menu.jade
+                div(class="style_title_list")
+                    img(id="style_title" class="style_title" src="~img/style/style_title_1.png")
+                    img(class="style_deco" src="~img/style/deco.png")
+
+                img(class="r_btn btn_pointer" src="~img/home/btn_R.png")
+                img(class="l_btn btn_pointer" src="~img/home/btn_L.png")
+                img(class="back_btn btn_pointer" src="~img/style/btn_back.png")
+                img(class="btn_undo btn_pointer" src="~img/style/btn_undo.png" style="display:none;")
+                img(class="btn_next btn_pointer" src="~img/style/btn_next.png" style="display:none;")
+
+                ul(class="home_dots") 
+                    li
+                        img(class="dot_color" src="~img/dot_white.png")
+                    li
+                        img(class="dot_color" src="~img/_dot_yellow.png")

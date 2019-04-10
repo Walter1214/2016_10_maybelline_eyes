@@ -1,0 +1,39 @@
+#home_background {
+    #home_border {
+        .style_title_list {
+            position: absolute;
+            top: 10%;
+            right: $border_left_right;
+            // width: 30%;
+            width: 300px;
+            height: 15%;
+            .style_title {
+                position: absolute;
+                width: 265px;
+                // width: 100%;
+            }
+            .style_deco {
+                position: absolute;
+                top: -15%;
+                // right: 10%;
+                right: -3%;
+                width: 15%;
+            }
+        }
+        .back_btn {
+            position: absolute;
+            right: 0;
+            bottom: 10%;
+        }
+        .btn_undo {
+            position: absolute;
+            left: 0;
+            bottom: 20%
+        }
+        .btn_next {
+            position: absolute;
+            right: 0;
+            bottom: 20%
+        }
+    }
+}

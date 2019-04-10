@@ -1,0 +1,90 @@
+- var devMode = process.env.NODE_ENV  == 'development'
+- function date_now_format() { var date = new Date(); return date.getFullYear() + "_" + ( date.getMonth() + 1 ) + "_" + date.getDate() + "_" + date.getHours() + "_" + date.getMinutes() + "_" + date.getSeconds();     }
+- var time = date_now_format();
+
+extends m_master
+block head
+
+    //- if !devMode
+        //- link(rel="stylesheet", href="asset/css/m_index.css")
+    script(defer,src="./asset/js/vendor/Utils.js")
+    script(defer,src="./asset/js/vendor/TransformTool.js")
+    script(defer,src="./asset/js/vendor/TransformCanvasPictures.js")
+    script(defer,src="./asset/js/vendor/anteater.validate.js")
+
+    script(defer,src="asset/js/m_step.js?_v_=#{time}")
+block content
+
+    .content
+
+        .background_all
+            .background_style.background_style_all
+                img(src="~m/step/style_big_fake.png", alt="")
+        .home_border
+
+        .step2_1_content.hide_content
+            input(id="upload_photo",type="file" style="display:none;")
+            img(class="logo",src="~img/m/step/step_2.png")
+            .step_text 請上傳雙眼正對鏡頭的清晰照片
+            img(class="upload_btn",src="~img/m/step/upload_btn.png")
+            a(href="m_interactive.html")
+                img(class="last_btn",src="~img/m/step/last_btn.png")
+        .step2_2_content.hide_content
+            img(class="step2_logo",src="~img/step_2/title.png")
+            .help_text() 請將雙眼置於黃框中間
+            .hit_area
+                canvas(id="canvas",width="525",height="300")
+                .rectangle_area
+                .safe_area
+                .remind_figure
+            img(class="btn_backupload" , src="~img/step_3/btn_backupload.png")
+            
+            img(class="next_step3 btn_pointer" , src="~img/step_2/btn_next.png",onclick="$.gapv('/style2016/m_upload/back_btn');")
+        .step3_content.hide_content
+            img(class="teaching_img", src="~img/m/step/Step3_tips.png" )
+            img(class="step3_logo",src="~img/step_3/title.png")
+            .help_text() 動動手，將眼線拉到適當的位置
+            .combing_img
+                img(id="RectangleImg",width="500",height="164")
+                canvas(id="canvas2",width="500",height="250")
+                //- .safe_area
+            img(class="btn_recutting btn_pointer" , src="~img/step_3/btn_recutting.png",onclick="$.gapv('/style2016/m_cut/doagain_btn');")
+            img(class="final_step btn_pointer" , src="~img/step_3/btn_connect.png",onclick="$.gapv('/style2016/m_cut/next_btn');")
+        .uploading_content.hide_content
+            img(id="result_img")
+            img(class="uploadingImg", src="~img/step_3/Uploading.png")
+        .final_content.hide_content
+            img(class="step_3_logo",src="~img/m/step/step_3_logo.png")
+            .help_text() 馬上分享作品，讓眾人看見你的態度
+                br
+                | 即可抽眼線液正品！
+            img(class="poster", width="500")
+            img(class="fb_share_btn btn_pointer",src="~img/final_step/fb_share_btn.png",onclick="$.gapv('/style2016/m_poster/share_btn');")
+            a(href="index.html")
+                img(class="next_share btn_pointer" , src="~img/final_step/next_share.png",onclick="$.gapv('/style2016/m_poster/share_next_btn');")
+        ul(class="user_contenct hide_content")
+            li
+                img(clss="share_success",src="~img/final_step/share_success.png")
+            li(class="help_text") 留下資料，即可抽媚比琳超激細抗暈眼線液正品！
+            li
+                div
+                    label(for="user_name") 姓名：
+                    input(type="text",id="user_name")
+            li
+                div
+                    label(for="user_email") E-mail：
+                    input(type="text",id="user_email")
+            li
+                div
+                    label(for="user_phone") 電話：
+                    input(type="text",id="user_phone")
+            li
+                input(type="checkbox", id="agreement")
+                label(for="agreement") 我已詳閱並同意活動辦法、注意事 項及
+                a(href="https://www.maybelline.com.tw/terms-of-service" target="_blank") 個資保護聲明。
+            li(class="help_text" ,style="text-align: left;") 注意事項 //
+            li(class="help_text" ,style="text-align: left;")  ＊你所填寫的資料將成為後續活動的聯絡依據，請務必填寫正確資料。
+            li(class="help_text" ,style="text-align: left;") ＊分享後請將貼文隱私設為公開，才符合抽獎資格
+            li(style="padding-top:20px;" )
+                a(onclick="$.gapv('/style2016/m_data/send_btn');dataLayer.push({'event':'ga-click', 'eventCategory':'lead', 'eventAction':'click', 'eventLabel':'lead_style2016'});")
+                    img(class="sent_out btn_pointer",src="~img/final_step/sent_out.png")

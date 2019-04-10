@@ -1,0 +1,80 @@
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 1000px;
+    max-width: 1920px;
+    height: 100%;
+    min-height: 660px;
+    max-height: 1280px;
+    margin: 0;
+}
+
+// .root
+// {
+//     width: 100%;
+//     min-width: 1000px;
+//     max-width: 1920px;
+//     height: 100%;
+//     min-height: 660px;
+//     max-height: 1280px;
+// }
+// #top {
+//     width: 100%;
+//     height: 5%;
+// }
+#top {
+    width: 100%;
+    height: 40px;
+    background-image: url('~img/top.jpg')
+}
+
+#go_maybelline {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 40px;
+}
+
+$border_number: 1%;
+#home_background {
+    position: relative;
+    padding: 30px;
+    #home_border {
+        position: relative;
+        height: 100%;
+        border: 2px solid yellow;
+        z-index: 1;
+    }
+    .number_two {
+        position: absolute;
+        top: $border_number;
+        left: $border_number;
+        color: yellow;
+    }
+    .number_zero {
+        position: absolute;
+        top: $border_number;
+        right: $border_number;
+        color: yellow;
+    }
+    .number_one {
+        position: absolute;
+        bottom: $border_number;
+        left: $border_number;
+        color: yellow;
+    }
+    .number_six {
+        position: absolute;
+        right: $border_number;
+        bottom: $border_number;
+        color: yellow;
+    }
+}
+
+.btn_pointer {
+    cursor: pointer;
+}

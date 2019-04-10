@@ -1,0 +1,31 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/interactive.js")
+
+block w_content  
+        #home_background
+            img(class="backgroundfourty" ,src="~img/blackfourty.png")
+
+            .background_all
+                div(class="background_style" , style="left:0%;background-img:url('~img/interactive/style_big_5.jpg');" )
+
+            #home_border
+                include ./w_menu.jade
+
+                div(class="interactive_content")
+                    img(class="step1_logo",src="~img/interactive/step1_logo.png")
+                    img(class="eye_left_btn btn_pointer",src="~img/interactive/left_btn.png")
+                    img(class="eye_right_btn btn_pointer",src="~img/interactive/right_btn.png")
+                    img(class="eye_style",src="~img/interactive/style_7.png")
+                    a(href="step.html?id=7" id="select_style")
+                        img(class="eye_next",src="~img/interactive/next.png")
+                    
+
+                ul(class="home_dots" style="bottom:30%;left:46%;width:120px;") 
+                    li
+                        img(class="dot_color" src="~img/dot_white.png")
+                    //- li 
+                    //-     img(class="dot_color" src="~img/_dot_yellow.png")
+                    li
+                        img(class="dot_color" src="~img/dot_white.png")

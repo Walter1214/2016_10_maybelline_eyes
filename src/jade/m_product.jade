@@ -1,0 +1,28 @@
+- var devMode = process.env.NODE_ENV  == 'development'
+- function date_now_format() { var date = new Date(); return date.getFullYear() + "_" + ( date.getMonth() + 1 ) + "_" + date.getDate() + "_" + date.getHours() + "_" + date.getMinutes() + "_" + date.getSeconds();     }
+- var time = date_now_format();
+
+extends m_master
+block head
+
+    //- if !devMode
+        //- link(rel="stylesheet", href="asset/css/m_product.css")
+
+    script(defer,src="asset/js/m_product.js?_v_=#{time}")
+
+
+block content
+    .content
+        img(src="~m/product/product.jpg", alt="")
+        div(style="position: absolute;bottom:29%;left:29%;")
+            a.back_btn(onclick="$.gapv('/style2016/product/m_ec_btn');",href="https://tw.mall.yahoo.com/item/MAYBELLINE-%E5%AA%9A%E6%AF%94%E7%90%B3-%E8%B6%85%E6%BF%80%E7%B4%B0%E6%8A%97%E6%9A%88%E7%9C%BC%E7%B7%9A%E6%B6%B2-%E6%8A%97%E6%89%8B%E9%9C%87%E7%89%88-0-5g-p0429109400549" target="_blank")
+                img(src="~m/product/btn_EC.jpg",height="37", alt="")
+        div(style="position: absolute;bottom:1%;left:20%;")
+            a.go_top_btn(href="javascript:;")
+                img(src="~m/product/btn_top.jpg",height="35",style="padding-right:20px;", alt="")
+        div(style="position: absolute;bottom:1%;right:20%;")
+            a.back_btn(href="m_guide.html")
+                img(src="~m/product/btn_back.png",height="35",style="padding-left:20px;", alt="")
+        div(style="position: absolute;bottom:3%;left:29%;")
+            a.back_btn(href="https://tw.mall.yahoo.com/item/MAYBELLINE-%E5%AA%9A%E6%AF%94%E7%90%B3-%E6%96%B0%E6%84%9F%E8%A6%BA-%E6%A5%B5%E8%87%B4%E6%BF%83%E5%AF%86%E5%A5%A2%E8%8F%AF%E7%B2%BE%E8%90%83%E7%9D%AB%E6%AF%9B%E8%86%8F-10-p0429112094742" target="_blank")
+                img(src="~m/product/btn_EC.jpg",height="37", alt="")

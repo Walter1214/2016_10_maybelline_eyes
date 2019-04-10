@@ -1,0 +1,136 @@
+@mixin transition( $property: all, $time: 0.35s) {
+    transition: $property $time cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+img {
+    vertical-align: top;
+}
+
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.wrap {
+    position: relative;
+    min-height: 780px;
+    // min-height: 100vh;
+}
+
+.slick-list {
+    outline: none !important;
+    &:focus,
+    a {
+        outline: none;
+    }
+    img {
+        border-style: none;
+    }
+}
+
+.slick-dots {
+    li {
+        display: inline-block;
+        button {
+            outline: none;
+            color: white;
+            border: 0;
+            font-size: 14px;
+            background: initial;
+            &::before {
+                content: "";
+                width: 20px;
+                height: 30px;
+                display: block;
+                background-image: url('~m/index/dot.png');
+            }
+        }
+        &.slick-active {
+            button {
+                color: #fffc00;
+                &::before {
+                    background-position: bottom;
+                }
+            }
+        }
+    }
+}
+
+header {
+    position: relative;
+    height: 54px;
+    background-color: black;
+    .logo {
+        position: relative;
+        width: 203px;
+        height: 54px;
+        left: 15px;
+        display: block;
+        background-image: url('~m/logo.png');
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 73px;
+        height: 54px;
+        display: block;
+        background-image: url('~m/menu.png');
+        &.on {
+            background-image: url(~m/menu_close.png);
+        }
+    }
+}
+
+.menu_content {
+    // display: none;
+    visibility: hidden;
+    position: fixed;
+    width: calc( 100% - 40px);
+    height: calc( 100% - 100px);
+    left: 20px;
+    top: 80px;
+    z-index: 999;
+    box-sizing: border-box;
+    padding-top: 120px;
+    background: #fffc00 url('~m/menu_content_line.png') no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    opacity: 0;
+    @include transition(opacity);
+    &.on {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu_item {
+        display: inline-block;
+        width: 400px;
+        height: 40px;
+        margin: 20px 0;
+        background-repeat: no-repeat;
+        &.menu0 {
+            background-image: url('~m/menu0.png');
+        }
+        &.menu1 {
+            background-image: url('~m/menu1.png');
+        }
+        &.menu2 {
+            background-image: url('~m/menu2.png');
+        }
+        &.menu3 {
+            background-image: url('~m/menu3.png');
+        }
+        &.menu4 {
+            background-image: url('~m/menu4.png');
+        }
+        &.menu5 {
+            background-image: url('~m/menu5.png');
+        }
+    }
+}

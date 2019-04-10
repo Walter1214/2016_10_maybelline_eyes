@@ -1,0 +1,51 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/product.js")
+        
+block w_content  
+        #home_background
+            img(class="backgroundfourty" src="~img/home/Rectangle6.png" hidden)
+
+            .background_all
+                .background_left
+                    .left_silder
+                        div(style="left:-100%;background;background-image: url('asset/img/product/product_photo_3.jpg')")
+                        div(style="left:0%;background;background-image: url('asset/img/product/product_photo_1.jpg')")
+                        div(style="left:100%;background;background-image: url('asset/img/product/product_photo_2.jpg')")
+                        div(style="left:200%;background;background-image: url('asset/img/product/product_photo_3.jpg')")
+                        div(style="left:300%;background;background-image: url('asset/img/product/product_photo_1.jpg')")
+                    //- img(class="product_photo_3" style="left:-100%" src="~img/product/product_photo_3.jpg")
+                    //- img(class="product_photo_1" style="left:0%"  src="~img/product/product_photo_1.jpg")
+                    //- img(class="product_photo_2" style="left:100%"  src="~img/product/product_photo_2.jpg")
+                    //- img(class="product_photo_3" style="left:200%"  src="~img/product/product_photo_3.jpg")
+                    //- img(class="product_photo_1" style="left:300%"  src="~img/product/product_photo_1.jpg")
+                    //- img(class="product_photo_4" src="~img/producteye/product_eye_photo.jpg" )
+                    
+                    img(class="product_r_btn btn_pointer" src="~img/product/btn_right.png")
+                    img(class="product_l_btn btn_pointer" src="~img/product/btn_left.png")
+                .background_right
+                    img(id="product_text" class="product_text product_text_1" src="~img/product/product_text_1.jpg")
+                    //- img(class="product_text product_text_2" src="~img/product/product_text_2.jpg" )
+                    //- img(class="product_text product_text_3" src="~img/product/product_text_3.jpg" )
+                    //- img(class="product_text_4" src="~img/producteye/product_text_4.jpg" )
+                    .product_yahoo
+                        a(onclick="$.gapv('/style2016/product/ec_btn');",href="https://tw.mall.yahoo.com/item/MAYBELLINE-%E5%AA%9A%E6%AF%94%E7%90%B3-%E8%B6%85%E6%BF%80%E7%B4%B0%E6%8A%97%E6%9A%88%E7%9C%BC%E7%B7%9A%E6%B6%B2-%E6%8A%97%E6%89%8B%E9%9C%87%E7%89%88-0-5g-p0429109400549" target="_blank")
+                            img(id="yahoo_logo",class="yahoo_logo btn_pointer", src="~img/product/Yahoo_Logo.png")
+                        img( class="buy_logo" src="~img/product/buy_logo.gif")
+                    .another_product_eye
+                        img( class="product_eye btn_pointer" src="~img/product/product_eye.png", onclick="window.location.href='producteye.html'")
+                        img( class="product_eye_go" src="~img/product/product_eye_go.gif")
+
+                    
+            #home_border
+                include ./w_menu.jade
+
+
+                ul(class="product_dots") 
+                    li
+                        img(class="dot_color", src="~img/_dot_yellow.png")
+                    li
+                        img(class="dot_color", src="~img/dot_white.png")
+                    li
+                        img(class="dot_color", src="~img/dot_white.png")

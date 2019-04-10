@@ -1,0 +1,20 @@
+extends w_master
+
+block w_head
+        script(defer,src="./asset/js/list.js")
+
+block w_content     
+        #home_background
+            img(class="backgroundfourty" ,src="~img/blackfourty.png")
+
+            .background_all
+                div(class="background_style" , style="left:0%;background-image:url('asset/img/interactive/style_all.jpg');" )
+            #home_border
+
+                include ./w_menu.jade
+
+                .list_message 
+                    .title() 媚比琳超激細抗暈眼線液 《 正品得獎名單 》 共30名
+                    //- img(src="../img/list/list_message.png")
+                    .content
+                        img(src="../img/list/list_member.png")
